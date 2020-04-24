@@ -1,0 +1,35 @@
+{% extends 'index.html' %}
+{% block content %}
+<h1 style="text-align:center;"><p style="color:red">Create New Account</p></h1>
+<form method = "POST">
+        <table>
+        <tr><td>
+    User Id:
+</td>
+    <td><input type ="text" placeholder="Id" name=""></td>
+</tr>
+
+		{% csrf_token %}
+		{{form.as_p}}
+    <tr><td>
+    Gender:
+</td>
+        <td><input type ="radio" name="Gender">Male
+            <input type="radio" name="Gender">Female
+            <input type="radio" name="Gender">others
+        </td>
+    </tr>
+    <tr><td>
+    Email Id:
+</td>
+    <td><input type ="text" placeholder="Email" name=""></td>
+</tr>
+    <tr><td>
+    Mobile No:
+</td>
+    <td><input type ="text" placeholder="Mobile " name=""></td>
+</tr>
+</table>
+        <button>Register</button>
+	</form>
+{% endblock %}
